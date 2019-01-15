@@ -1,6 +1,7 @@
 package io.flutter.plugins;
 
 import io.flutter.plugin.common.PluginRegistry;
+import com.appspector.flutter.plugin.AppSpectorPlugin;
 
 /**
  * Generated file. Do not edit.
@@ -10,6 +11,7 @@ public final class GeneratedPluginRegistrant {
     if (alreadyRegisteredWith(registry)) {
       return;
     }
+    AppSpectorPlugin.registerWith(registry.registrarFor("com.appspector.flutter.plugin.AppSpectorPlugin"));
   }
 
   private static boolean alreadyRegisteredWith(PluginRegistry registry) {

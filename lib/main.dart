@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'view/repo_view.dart';
+import 'package:appspector_plugin/appspector_plugin.dart';
 
 void main() {
+  runAppSpector();
   runApp(
       new MaterialApp(
         title: 'Flutter Demo',
@@ -11,6 +13,13 @@ void main() {
        )
       )
   );
+}
+
+void runAppSpector() {
+  var config = new Config();
+  config.androidApiKey = "ODI1MTBjYzEtMjcwMS00NmQwLTk2YzQtODEzMWU4MjA3YTFj";
+  config.iosApiKey = "ZWFiNjlhZDUtMjA0Mi00YmM2LWI4MTUtNzc1ZjRlODFmNmJi";
+  AppSpectorPlugin.run(config);
 }
 
 class HomeWidget extends StatelessWidget {
